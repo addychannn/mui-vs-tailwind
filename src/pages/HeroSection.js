@@ -1,138 +1,145 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import AboutMui from "./AboutMui";
 
+// MovingImage component
+const ButtonIcon = () => {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: "80%",
+        left: "70%",
+        transform: "translate(-50%, -50%)",
+        animation: "moveImage 3s infinite alternate",
+      }}
+    >
+      <img src="/button.png" alt="Moving Image" />
+    </div>
+  );
+};
+
+const AvatarIcon = () => {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: "20%",
+        left: "80%",
+        transform: "translate(-50%, -50%)",
+        animation: "pulse 1.5s infinite",
+      }}
+    >
+      <img src="/Avatar.png" alt="Moving Image" />
+    </div>
+  );
+};
+
+const CheckboxIcon = () => {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: "60%",
+        right: "80%",
+        transform: "translate(-50%, -50%)",
+        animation: "pulse 1.5s infinite",
+      }}
+    >
+      <img src="/Checkbox.png" alt="Moving Image" />
+    </div>
+  );
+};
+
+const Snackbar = () => {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: "20%",
+        right: "60%",
+        transform: "translate(-50%, -50%)",
+        animation: "moveImage 3s infinite alternate",
+      }}
+    >
+      <img src="/Snackbar.png" alt="Moving Image" />
+    </div>
+  );
+};
+
+// HeroSection component
 const HeroSection = () => {
   return (
     <>
-      <section class="h-screen">
-        {/* <!-- SVG Background --> */}
-        <span class="[&>svg]:absolute [&>svg]:-z-10 [&>svg]:m-auto [&>svg]:block [&>svg]:w-full">
-          <svg
-            // xmlns="http://www.w3.org/2000/svg"
-            // xmlns:xlink="http://www.w3.org/1999/xlink"
-            height="680"
-            preserveAspectRatio="none"
-            viewBox="0 0 1920 880"
-          >
-            <g transform="translate(960,440) scale(1,1) translate(-960,-440)">
-              <linearGradient
-                id="lg-0.047955344060927496"
-                x1="0"
-                x2="1"
-                y1="0"
-                y2="0"
-              >
-                <stop stop-color="hsl(217, 88%, 33.7%)" offset="0"></stop>
-                <stop stop-color="hsl(217, 88%, 75.1%)" offset="1"></stop>
-              </linearGradient>
-              <path d="" fill="url(#lg-0.047955344060927496)" opacity="0.4">
-                <animate
-                  attributeName="d"
-                  dur="33.333333333333336s"
-                  repeatCount="indefinite"
-                  keyTimes="0;0.333;0.667;1"
-                  calcmod="spline"
-                  keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
-                  begin="0s"
-                  values="M0 0L 0 804.2328934685746Q 320 597.3613372284876  640 571.0708916590191T 1280 512.0661063245175T 1920 301.8788007488083L 1920 0 Z;M0 0L 0 877.6839081951588Q 320 668.0720922803877  640 649.0018928349388T 1280 328.7087077664202T 1920 162.95038242563396L 1920 0 Z;M0 0L 0 724.9886210051687Q 320 661.4364572061575  640 623.2173947479624T 1280 359.20353038907734T 1920 135.51673041732283L 1920 0 Z;M0 0L 0 804.2328934685746Q 320 597.3613372284876  640 571.0708916590191T 1280 512.0661063245175T 1920 301.8788007488083L 1920 0 Z"
-                ></animate>
-              </path>
-              <path d="" fill="url(#lg-0.047955344060927496)" opacity="0.4">
-                <animate
-                  attributeName="d"
-                  dur="33.333333333333336s"
-                  repeatCount="indefinite"
-                  keyTimes="0;0.333;0.667;1"
-                  calcmod="spline"
-                  keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
-                  begin="-6.666666666666667s"
-                  values="M0 0L 0 765.7607191473613Q 320 641.7853945676919  640 624.2534689988059T 1280 365.27264408032966T 1920 190.38947978522663L 1920 0 Z;M0 0L 0 842.1984196370487Q 320 570.6690721707517  640 540.6844954979398T 1280 439.92879442880593T 1920 200.29713960445451L 1920 0 Z;M0 0L 0 796.6802345094818Q 320 721.9216894353016  640 696.8815669355181T 1280 373.6367381440213T 1920 196.63169821789495L 1920 0 Z;M0 0L 0 765.7607191473613Q 320 641.7853945676919  640 624.2534689988059T 1280 365.27264408032966T 1920 190.38947978522663L 1920 0 Z"
-                ></animate>
-              </path>
-              <path d="" fill="url(#lg-0.047955344060927496)" opacity="0.4">
-                <animate
-                  attributeName="d"
-                  dur="33.333333333333336s"
-                  repeatCount="indefinite"
-                  keyTimes="0;0.333;0.667;1"
-                  calcmod="spline"
-                  keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
-                  begin="-13.333333333333334s"
-                  values="M0 0L 0 801.7562714943509Q 320 634.0247183381232  640 605.7090791951217T 1280 503.9393370140325T 1920 224.7551247480177L 1920 0 Z;M0 0L 0 821.0401780336218Q 320 670.8690783540507  640 637.0744123031742T 1280 456.40745286432224T 1920 278.1294357804296L 1920 0 Z;M0 0L 0 744.0534225112256Q 320 637.6425395409125  640 593.2079605185819T 1280 457.03995196824286T 1920 254.87693899994804L 1920 0 Z;M0 0L 0 801.7562714943509Q 320 634.0247183381232  640 605.7090791951217T 1280 503.9393370140325T 1920 224.7551247480177L 1920 0 Z"
-                ></animate>
-              </path>
-              <path d="" fill="url(#lg-0.047955344060927496)" opacity="0.4">
-                <animate
-                  attributeName="d"
-                  dur="33.333333333333336s"
-                  repeatCount="indefinite"
-                  keyTimes="0;0.333;0.667;1"
-                  calcmod="spline"
-                  keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
-                  begin="-20s"
-                  values="M0 0L 0 817.8603658675457Q 320 592.9404308081629  640 559.1126621853513T 1280 428.9912604821798T 1920 209.017381620229L 1920 0 Z;M0 0L 0 802.0504889976935Q 320 561.3963273210122  640 537.6024084387631T 1280 430.41283267566695T 1920 256.1972069733954L 1920 0 Z;M0 0L 0 789.4448177495887Q 320 561.9675446430498  640 531.6192318019404T 1280 414.76018143244175T 1920 265.9163329632971L 1920 0 Z;M0 0L 0 817.8603658675457Q 320 592.9404308081629  640 559.1126621853513T 1280 428.9912604821798T 1920 209.017381620229L 1920 0 Z"
-                ></animate>
-              </path>
-              <path d="" fill="url(#lg-0.047955344060927496)" opacity="0.4">
-                <animate
-                  attributeName="d"
-                  dur="33.333333333333336s"
-                  repeatCount="indefinite"
-                  keyTimes="0;0.333;0.667;1"
-                  calcmod="spline"
-                  keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
-                  begin="-26.666666666666668s"
-                  values="M0 0L 0 844.0541574423102Q 320 623.0697081316591  640 592.8483890737847T 1280 469.85448734523794T 1920 190.81850676853674L 1920 0 Z;M0 0L 0 871.4928294956283Q 320 618.9784567388518  640 593.1183717103518T 1280 376.5051942642811T 1920 141.32293927545027L 1920 0 Z;M0 0L 0 782.0118384610068Q 320 727.3267836497654  640 694.0476176759635T 1280 518.1545471640493T 1920 276.0053882957168L 1920 0 Z;M0 0L 0 844.0541574423102Q 320 623.0697081316591  640 592.8483890737847T 1280 469.85448734523794T 1920 190.81850676853674L 1920 0 Z"
-                ></animate>
-              </path>
-            </g>
-          </svg>
-        </span>
-        {/* <!-- SVG Background --> */}
+      <style>
+        {`
+          @keyframes moveImage {
+            0% { transform: translate(-50%, -50%); }
+            100% { transform: translate(-50%, 0); }
+          }
+        `}
+      </style>
+      <section
+        className="flex h-screen justify-center "
+        style={{
+          backgroundImage: `url('../bg.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* MovingImage component */}
+        <ButtonIcon />
+        <AvatarIcon />
+        <CheckboxIcon />
+        <Snackbar />
 
-        <div class="flex justify-center pt-48">
-          {/* <!-- Jumbotron --> */}
-          <div class=" w-100 mx-auto px-6 sm:max-w-2xl md:max-w-3xl md:px-12 lg:max-w-5xl xl:max-w-7xl xl:px-32">
-            <div class="text-center">
-              <div
-                class="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,10%,0.8)] dark:shadow-black/20 md:py-16 md:px-12"
-                sx="
-                margin-top: 180px;
-                backdrop-filter: saturate(200%) blur(25px);
-              "
-              >
-                <div class="grid grid-cols-3 gap-2">
+        <div className="flex justify-center items-center">
+          <div className="py-8 px-4 mx-auto  text-center lg:py-16 lg:px-12">
+            <div className="flex justify-center">
+              <div className="block max-w-xl mx-auto">
+                <div className="grid grid-cols-3 gap-1">
                   <div>
-                    <img src="/MUILogo.png" />
+                    <img src="/MUILogo.png" alt="MUI Logo" />
                   </div>
-                  <div class="flex items-center justify-center">
-                    <h3 class="mt-6 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-white">
+                  <div className="flex items-center justify-center">
+                    <h3 className="text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
                       vs
                     </h3>
                   </div>
-
-                  <div class="flex items-center justify-center">
-                    <img src="/tailwingLogo.png" />
+                  <div className="flex items-center justify-center">
+                    <img src="/tailwingLogo.png" alt="Tailwind Logo" />
                   </div>
                 </div>
-                <h1 class="mt-6 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-5xl text-white">
-                  Which one is better?
-                </h1>
-                <a
-                  class="mb-2 inline-block rounded bg-primary px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] md:mr-2 md:mb-0"
-                  data-te-ripple-init
-                  data-te-ripple-color="light"
-                  href="#!"
-                  role="button"
-                >
-                  Get started
-                </a>
               </div>
             </div>
+
+            <p className="mb-8 text-3xl font-normal text-gray-500  dark:text-gray-400">
+              Which one is better?
+            </p>
+            <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+              {/* Use Link for navigation */}
+              <Link
+                to="/about-mui"
+                className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-gray-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 bg-blue-500 "
+              >
+                Learn more
+                <svg
+                  className="ml-2 -mr-1 w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+              </Link>
+            </div>
           </div>
-          {/* <!-- Jumbotron --> */}
         </div>
       </section>
-      {/* <!-- Section: Design Block --> */}
     </>
   );
 };

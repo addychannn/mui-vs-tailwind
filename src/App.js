@@ -1,14 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import HeroSection from "./pages/HeroSection";
-// import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { AboutMui } from "./pages/AboutMui";
+import { Navbar } from "./pages/Navbar";
 
 export default function App() {
   return (
-    <>
-      <div>
-        <HeroSection />
-      </div>
-    </>
+    <Router>
+      <Fragment>
+        {/* <Navbar /> */}
+        <Routes>
+          <Route path="/about-mui" element={<AboutMui />} />
+          <Route path="/" element={<HeroSection />} />
+        </Routes>
+      </Fragment>
+    </Router>
   );
 }
