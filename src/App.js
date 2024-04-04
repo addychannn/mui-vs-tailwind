@@ -1,17 +1,36 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
 import HeroSection from "./pages/HeroSection";
-import { AboutMui } from "./pages/AboutMui";
-import { Navbar } from "./pages/Navbar";
+import { AboutMuiWithTeam } from "./pages/MUI/AboutMuiWithTeam";
+import { ProsAndConsMui } from "./pages/MUI/ProsAndConsMui";
+import { AboutTailwindwithComponents } from "./pages/Tailwind/AboutTailwindwithComponents.js";
+import { MuiTeam } from "./pages/MUI/MuiTeam.js";
+import { TailwindTeam } from "./pages/Tailwind/TailwindTeam.js";
+import { ProsAndConsTailwind } from "./pages/Tailwind/ProsAndConsTailwind.js";
 
 export default function App() {
   return (
     <Router>
       <Fragment>
-        {/* <Navbar /> */}
         <Routes>
-          <Route path="/about-mui" element={<AboutMui />} />
+          <Route path="/about-mui" element={<AboutMuiWithTeam />} />
+          <Route
+            path="/about-mui-team"
+            element={<MuiTeam />}
+          />
+          <Route path="/pros-and-cons" element={<ProsAndConsMui />} />
+          <Route
+            path="/about-tailwind"
+            element={<AboutTailwindwithComponents />}
+          />
+          <Route
+            path="/about-tailwind-creator"
+            element={<TailwindTeam />}
+          />
+           <Route
+            path="/pros-and-cons-tailwind"
+            element={<ProsAndConsTailwind />}
+          />
           <Route path="/" element={<HeroSection />} />
         </Routes>
       </Fragment>

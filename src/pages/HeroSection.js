@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AboutMui from "./AboutMui";
+import AboutMui from "./MUI/AboutMui";
 
 // MovingImage component
 const ButtonIcon = () => {
@@ -117,7 +117,7 @@ const HeroSection = () => {
               Which one is better?
             </p>
             <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-              {/* Use Link for navigation */}
+             
               <Link
                 to="/about-mui"
                 className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-gray-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 bg-blue-500 "

@@ -8,7 +8,7 @@ export const Navbar = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
   return (
-    <header class="antialiased p-8">
+    <header class="p-2 bg-blue-500">
       <nav>
         <div class="flex flex-wrap justify-between items-center">
           <div class="flex justify-start items-center">
@@ -16,7 +16,7 @@ export const Navbar = () => {
               id="toggleSidebar"
               aria-expanded="true"
               aria-controls="sidebar"
-              class="hidden p-2 mr-3 text-gray-600 rounded cursor-pointer lg:inline hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700"
+              class="hidden p-2 mr-3 text-white rounded cursor-pointer lg:inline hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700"
             >
               <svg
                 class="w-5 h-5"
