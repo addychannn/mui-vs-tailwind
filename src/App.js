@@ -7,6 +7,8 @@ import { AboutTailwindwithComponents } from "./pages/Tailwind/AboutTailwindwithC
 import { MuiTeam } from "./pages/MUI/MuiTeam.js";
 import { TailwindTeam } from "./pages/Tailwind/TailwindTeam.js";
 import { ProsAndConsTailwind } from "./pages/Tailwind/ProsAndConsTailwind.js";
+import { QuestionPage } from "./pages/QuestionPage.js";
+import { ComparisonPage } from "./pages/ComparisonPage.js";
 
 export default function App() {
   return (
@@ -32,6 +34,8 @@ export default function App() {
             element={<ProsAndConsTailwind />}
           />
           <Route path="/" element={<HeroSection />} />
+          <Route path="/question-page" element={<QuestionPage />} />
+          <Route path="/comparison-page" element={<ComparisonPage />} />
         </Routes>
       </Fragment>
     </Router>
