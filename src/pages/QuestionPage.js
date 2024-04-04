@@ -97,29 +97,39 @@ const ButtonNext = () => {
 
 export const QuestionPage = () => {
   return (
-    <section
-      className="flex justify-center h-screen"
-      style={{
-        backgroundImage: `url('../bg.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <ButtonIcon />
-      <AvatarIcon />
-      <CheckboxIcon />
-      <Snackbar />
-      <ButtonNext />
+    <>
+      <style>
+        {`
+          @keyframes moveImage {
+            0% { transform: translate(-50%, -50%); }
+            100% { transform: translate(-50%, 0); }
+          }
+        `}
+      </style>
+      <section
+        className="flex justify-center h-screen"
+        style={{
+          backgroundImage: `url('../bg.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <ButtonIcon />
+        <AvatarIcon />
+        <CheckboxIcon />
+        <Snackbar />
+        <ButtonNext />
 
-      <div class="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12">
-        <img src="\Thinking.png" />
-        <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none ">
-          Which one is better though?
-        </h1>
-        <p class="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
-          Or should we even compare them?
-        </p>
-      </div>
-    </section>
+        <div class="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12">
+          <img src="\Thinking.png" />
+          <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none ">
+            Which one is better though?
+          </h1>
+          <p class="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
+            Or should we even compare them?
+          </p>
+        </div>
+      </section>
+    </>
   );
 };

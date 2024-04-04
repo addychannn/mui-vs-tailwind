@@ -9,7 +9,7 @@ const AvatarIcon = () => {
       style={{
         position: "absolute",
         top: "10%",
-        left: "90%",
+        left: "80%",
         transform: "translate(-50%, -50%)",
         animation: "pulse 1.5s infinite",
       }}
@@ -19,6 +19,21 @@ const AvatarIcon = () => {
   );
 };
 
+const Snackbar = () => {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: "10%",
+        right: "60%",
+        transform: "translate(-50%, -50%)",
+        animation: "moveImage 3s infinite alternate",
+      }}
+    >
+      <img src="/Snackbar.png" alt="Moving Image" />
+    </div>
+  );
+};
 const ButtonIcon = () => {
   return (
     <div
@@ -33,7 +48,7 @@ const ButtonIcon = () => {
         to="/question-page"
         className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-gray-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 bg-blue-500 "
       >
-       Next
+        Next
         <svg
           className="ml-2 -mr-1 w-5 h-5"
           fill="currentColor"
@@ -52,36 +67,36 @@ const ButtonIcon = () => {
 };
 
 const CheckboxIcon = () => {
-    return (
-      <div
-        style={{
-          position: "absolute",
-          top: "90%",
-          right: "80%",
-          transform: "translate(-50%, -50%)",
-          animation: "pulse 1.5s infinite",
-        }}
-      >
-        <img src="/Checkbox.png" alt="Moving Image" />
-      </div>
-    );
-  };
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: "90%",
+        right: "80%",
+        transform: "translate(-50%, -50%)",
+        animation: "pulse 1.5s infinite",
+      }}
+    >
+      <img src="/Checkbox.png" alt="Moving Image" />
+    </div>
+  );
+};
 
-  const RadioIcon = () => {
-    return (
-      <div
-        style={{
-          position: "absolute",
-          top: "10%",
-          right: "90%",
-          transform: "translate(-50%, -50%)",
-          animation: "pulse 1.5s infinite",
-        }}
-      >
-        <img src="/Radio.png" alt="Moving Image" />
-      </div>
-    );
-  };
+const RadioIcon = () => {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: "10%",
+        right: "90%",
+        transform: "translate(-50%, -50%)",
+        animation: "pulse 1.5s infinite",
+      }}
+    >
+      <img src="/Radio.png" alt="Moving Image" />
+    </div>
+  );
+};
 
 export const ProsAndConsTailwind = () => {
   return (
@@ -93,14 +108,14 @@ export const ProsAndConsTailwind = () => {
         backgroundPosition: "center",
       }}
     >
-      <AvatarIcon />
       <ButtonIcon />
+      <AvatarIcon />
       <CheckboxIcon />
-      <RadioIcon />
+      <Snackbar />
       <div className="container">
         <div className="grid grid-cols-2 justify-center h-screen">
           <div className="flex flex-col justify-center items-center ">
-           <ProsTailwind />
+            <ProsTailwind />
           </div>
 
           <div className="flex flex-col justify-center items-center">

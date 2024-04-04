@@ -43,7 +43,7 @@ const ButtonIcon = () => {
         to="/about-tailwind"
         className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-gray-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 bg-blue-500 "
       >
-       Next
+        Next
         <svg
           className="ml-2 -mr-1 w-5 h-5"
           fill="currentColor"
@@ -70,7 +70,7 @@ export const MuiTeam = () => {
         backgroundPosition: "center",
       }}
     >
-      <ButtonIcon/>
+      <ButtonIcon />
       <div>
         <AvatarIcon />
         <CheckboxIcon />
@@ -128,11 +128,11 @@ export const MuiTeam = () => {
               </div>
             </div>
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <img className="rounded-t-lg" src="MuiTeam/marija.png" alt="" />
+              <img className="rounded-t-lg" src="MuiTeam/danail.png" alt="" />
 
               <div className="p-5 ">
                 <p className="mb-2 text-md font-bold  text-gray-900 dark:text-white">
-                  Marija Najdova
+                  Danail Hadjiatanasov
                 </p>
 
                 <p className=" font-normal text-gray-700 dark:text-gray-400">

@@ -2,18 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const AvatarIcon = () => {
-  return (
-    <div
-      style={{
-        position: "absolute",
-        top: "5%",
-        left: "90%",
-      }}
-    >
-      <img src="/Avatar.png" alt="Moving Image" />
-    </div>
-  );
-};
+    return (
+      <div
+        style={{
+          position: "absolute",
+          top: "20%",
+          left: "80%",
+          transform: "translate(-50%, -50%)",
+          animation: "pulse 1.5s infinite",
+        }}
+      >
+        <img src="/Avatar.png" alt="Moving Image" />
+      </div>
+    );
+  };
 
 const CheckboxIcon = () => {
   return (
@@ -60,61 +62,92 @@ const ButtonIcon = () => {
     </div>
   );
 };
-export const TailwindTeam = () => {
+const Snackbar = () => {
   return (
-    <section
-      className="flex justify-center items-center h-screen"
+    <div
       style={{
-        backgroundImage: `url('../bg2.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        position: "absolute",
+        top: "20%",
+        right: "60%",
+        transform: "translate(-50%, -50%)",
+        animation: "moveImage 3s infinite alternate",
       }}
     >
-      <ButtonIcon />
-      <div>
+      <img src="/Snackbar.png" alt="Moving Image" />
+    </div>
+  );
+};
+export const TailwindTeam = () => {
+  return (
+    <>
+      <style>
+        {`
+          @keyframes moveImage {
+            0% { transform: translate(-50%, -50%); }
+            100% { transform: translate(-50%, 0); }
+          }
+        `}
+      </style>
+      <section
+        className="flex justify-center items-center h-screen"
+        style={{
+          backgroundImage: `url('../bg2.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <ButtonIcon />
         <AvatarIcon />
         <CheckboxIcon />
-        <div className="container">
-          <div className=" text-center mb-8 lg:mb-16">
-            <h2 className="mb-4 text-7xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-              Meet the Creator
-            </h2>
-            <h2 className="mb-4 text-md tracking-tight font-extrabold text-gray-900 dark:text-white">
-              Adam Wathan
-            </h2>
-          </div>
-          <div className="bg-white p-8 rounded-lg">
-            <div className="flex flex-row justify-center items-center">
-              <div className=" ">
-                <div className="p-8" sx={{ width: 300 }}>
-                  <p className="mb-2 text-xl font-bold  text-gray-900 dark:text-white">
-                    "I created Tailwind CSS and built a multi-million dollar <br/>
-                    business around it."
-                  </p>
+        <Snackbar />
 
-                  <p className=" font-normal text-gray-700 dark:text-gray-400">
-                    "We launched Tailwind UI in 2020 which is doing seven
-                    figures
-                    <br />
-                    per year and growing, and have grown to a small team of 7
-                    that
-                    <br />
-                    splits our time between working on our open source projects
-                    <br />
-                    and the commercial templates we release under the Tailwind
-                    UIs
-                    <br />
-                    brand."
-                  </p>
+        <div>
+          <AvatarIcon />
+          <CheckboxIcon />
+          <div className="container">
+            <div className=" text-center mb-8 lg:mb-16">
+              <h2 className="mb-4 text-7xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                Meet the Creator
+              </h2>
+              <h2 className="mb-4 text-md tracking-tight font-extrabold text-gray-900 dark:text-white">
+                Adam Wathan
+              </h2>
+            </div>
+            <div className="bg-white p-8 rounded-lg">
+              <div className="flex flex-row justify-center items-center">
+                <div className=" ">
+                  <div className="p-8" sx={{ width: 300 }}>
+                    <p className="mb-2 text-xl font-bold  text-gray-900 dark:text-white">
+                      "I created Tailwind CSS and built a multi-million dollar{" "}
+                      <br />
+                      business around it."
+                    </p>
+
+                    <p className=" font-normal text-gray-700 dark:text-gray-400">
+                      "We launched Tailwind UI in 2020 which is doing seven
+                      figures
+                      <br />
+                      per year and growing, and have grown to a small team of 7
+                      that
+                      <br />
+                      splits our time between working on our open source
+                      projects
+                      <br />
+                      and the commercial templates we release under the Tailwind
+                      UIs
+                      <br />
+                      brand."
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="max-w-sm">
-                <img className="rounded-t-lg" src="\Adam.png" alt="" />
+                <div className="max-w-sm">
+                  <img className="rounded-t-lg" src="\Adam.png" alt="" />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
